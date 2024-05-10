@@ -1,0 +1,52 @@
+.slider{
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.slider__img{
+    display: flex;
+}
+
+.slider__img img{
+    width: 100%;
+}
+
+.slider__img input{
+    display: none;
+}
+
+.labelslider{
+    display: flex;
+    justify-content: center;
+}
+
+.labelslider label{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid red ;
+    margin: 2px;
+    
+}
+
+.labelslider label:hover{
+    background-color: green;
+}
+
+#img1:checked ~.imgslider1{
+    margin-left: -100%;
+}
+
+#img2:checked ~.imgslider2{
+    margin-left: -200%;
+}
+
+#img3:checked ~.imgslider3{
+    margin-left: -300%;
+}
+
+#img4:checked ~.imgslider4{
+    margin-left: -400%;
+}

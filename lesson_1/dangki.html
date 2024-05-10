@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+
+    <script>
+        
+        function get_hoten(){
+            var hoten = document.getElementById("txt_hoten").value;
+            console.log(hoten);
+            alert ("xin chao thanh vien moi " + hoten);
+        }
+        function vanban(){
+            var hoten = document.getElementById('txt_hoten').value;
+            document.getElementById("vb").innerHTML = hoten;
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Form dang ki</h1>
+        <div class="row">
+            <div class="col-6" >
+                <form action="" method="">
+                    Nhap vao ho ten:
+                    <input autofocus onkeypress="vanban()" class="form-control" type="text" name="" id="txt_hoten">
+                    <br>
+                    <p id="vb"></p>
+                    <br>
+                    Nhap vao email: 
+                    <input class="form-control" type="email" name="" id="txt_email">
+                    <br>
+                    Nhap vao username: 
+                    <input class="form-control" type="text" name="" id="txt_username">
+                    <br>
+                    Nhap vao mat khau:
+                    <input class="form-control" type="password" name="" id="txt_password">
+                    <br>
+                    Chon anh dai dien 
+                    <input class="form-control" type="file" name="" id="file">
+                    <br>
+                    Gioi tinh :
+                    Nam: <input class="form-check-input" type="radio" name="sex" id="Nam">
+                    Nu:  <input class="form-check-input" type="radio" name="sex" id="Nu">
+                    <br>
+                    <input type="checkbox" name="" id="">
+                    <br>
+                    Lua chon trinh do:
+                    <select class="form-control" name="trinh_do" id="trinh_do">
+                        <option value="dai_hoc">dai_hoc</option>
+                        <option value="thpt">thpt</option>
+                        <option value="thac_si">thac_si</option>
+                    </select>
+                    <br>
+                    <a onclick="get_hoten();" href="#" class="btn btn-primary">Dang ky</a>
+                    <a href="#" class="btn btn-danger">Huy</a>
+                    <a href="#">Ban da co tai khoan?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

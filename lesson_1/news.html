@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Trang quản trị tin tức</h1>
+        <div class="row">
+            <div class="col-6">
+                <form action="news.html" method="post">
+                    Nhập vào tên danh mục
+                    <input class="form-control" type="text" name="txt_cate_name">
+                    <br>
+                    Nhập vào tiêu đề
+                    <input class="form-control" type="text" name="txt_title">
+                    <br>
+                    Nhập vào nội dung
+                    <input class="form-control" type="text" name="txt_content">
+                    <br>
+                    Chọn ảnh
+                    <input class="form-control" type="file" name="img">
+                    <br>
+                    Nhập vào trạng thái danh mục
+                    <input class="form-control" type="text" name="txt_status">
+                    <br>
+
+                    <input class="btn btn-primary" type="submit" value="Thêm mới">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <form action="">
+                    <input type="text" name="txt_search">
+                    <a class="btn btn-success" href="#">Search</a>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-stripped">
+                    <tr>
+                        <th>Mã danh mục</th>
+                        <th>Tiêu đề</th>
+                        <th>Nội dung</th>
+                        <th>Thao tác</th>
+                        <th>Ảnh</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chào đón tân sinh viên</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                            <a href="#" class="btn btn-warning">Sửa</a>
+                            <a href="#" class="btn btn-primary">Xoá</a>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kiểm tra tam giác</title>
+</head>
+
+<body>
+    <h1>Kiểm tra tam giác</h1>
+    <form id="triangleForm">
+        <label for="side1">Cạnh 1:</label>
+        <input type="number" id="side1" name="side1">
+        <br>
+
+        <label for="side2">Cạnh 2:</label>
+        <input type="number" id="side2" name="side2">
+        <br>
+
+        <label for="side3">Cạnh 3:</label>
+        <input type="number" id="side3" name="side3">
+        <br>
+
+        <input type="button" value="Kiểm tra" onclick="checkTriangle()">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkTriangle() {
+            const side1 = parseFloat(document.getElementById("side1").value);
+            const side2 = parseFloat(document.getElementById("side2").value);
+            const side3 = parseFloat(document.getElementById("side3").value);
+
+            if (side1 > 0 && side2 > 0 && side3 > 0) {
+                if (side1 + side2 > side3 && side2 + side3 > side1 && side3 + side1 > side2) {
+                    const resultElement = document.getElementById("result");
+
+                    if (side1 === side2 && side2 === side3) {
+                        resultElement.innerHTML = "Tam giác đều. tam giác cân. tam giác thường ";
+                    } else if (side1 === side2 || side2 === side3 || side3 === side1) {
+                        resultElement.innerHTML = "Tam giác cân. tam giác thường";
+                    } else if (
+                        side1 ** 2 + side2 ** 2 === side3 ** 2 ||
+                        side2 ** 2 + side3 ** 2 === side1 ** 2 ||
+                        side3 ** 2 + side1 ** 2 === side2 ** 2
+                    ) {
+                        resultElement.innerHTML = "Tam giác vuông. tam giác thường";
+                    } else {
+                        resultElement.innerHTML = "Tam giác thường.";
+                    }
+                } else {
+                    document.getElementById("result").innerHTML = "Ba cạnh không tạo thành tam giác.";
+                }
+            } else {
+                document.getElementById("result").innerHTML = "Vui lòng nhập các giá trị dương.";
+            }
+        }
+    </script>
+</body>
+
+</html>

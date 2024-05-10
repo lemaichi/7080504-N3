@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    
+    <style>
+            .blue{
+                background-color: blue;
+            }
+            .red{
+                background-color: red;
+            }
+            .green{
+                background-color: green;
+            }
+        </style>
+    
+    <script>
+        $(document).ready(function(){
+            $("#blue").click(function(){
+                $("#colorbox").toggleClass("blue");
+            })
+            $("#red").click(function(){
+                $("#colorbox").toggleClass("red");
+            })
+            $("#green").click(function(){
+                $("#colorbox").toggleClass("green");
+            })
+        })
+
+        
+    </script>
+
+    
+
+</head>
+<body>
+    <div class="container">
+        
+            <div id="colorbox" style="width: 300px; height: 200px;"></div>
+            <button class="btn btn-primary" id="blue"> Mau Xanh</button>
+            <button class="btn btn-danger" id="red">Mau Do</button>
+            <button class="btn btn-primary" id="green" style="background-color: green !important;">Mau Xanh</button>
+    </div>
+</body>
+</html>
